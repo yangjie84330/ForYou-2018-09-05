@@ -1,0 +1,134 @@
+/*phone css*/
+#bg {
+	width:100%; 
+	height: 320px;
+	overflow: hidden;
+}
+#bg img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+#about{
+	width: 95%;
+	margin:10px auto;
+}
+section h1{
+	color:rgb(110, 110, 110);
+	text-align: center;
+}
+#about p{
+	width: 69%;
+	margin: auto;
+	text-align: center;
+	line-height: 1.5;
+
+}
+#partnerone{    
+    width: 98%;
+    margin:5px auto 5px auto;
+    overflow: hidden;
+}
+#partnertwo{   
+    width: 98%;
+    margin:5px auto 5px auto;
+    overflow: hidden;
+}
+.imgframe{
+	width: 300px;
+	height: 300px;
+	margin: auto;
+    border-radius: 50%;
+	border: 5px solid rgb(252, 206, 174, 0.6);
+	overflow: hidden;
+}
+.imgframe>img{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	box-shadow: inset 20px 20px 4px rgb(5, 39, 17);
+    -webkit-box-shadow: inset 20px 20px 4px rgb(5, 39, 17);
+    -moz-box-shadow: inset 20px 20px 4px rgb(5, 39, 17);
+}
+#team ul{
+	padding-left: 80px;
+}
+.line{
+	width: 73%;
+	margin: auto;
+	margin-top:15px; 
+	border-top:1px solid rgb(95, 95, 95, 0.6); 
+}
+footer{
+    background-color: rgb(110, 110, 110);
+    width:100%;
+    text-align: center;
+	margin-top: 15px;
+	color:#fff;
+}
+#team ul li{
+	list-style:disc;
+	font-size: 25px;
+}
+/*tablet css*/
+@media only screen and (min-width: 481px) {
+
+	#partnerone{
+		width:88%;
+		float: none;
+		margin: auto;
+		padding-left: 30px;
+		margin-bottom: 15px;
+	}
+	#partnertwo{
+		width:88%;
+		float: none;
+		margin: auto;
+		padding-left: 30px;
+		margin-bottom: 25px;
+	}
+	.imgframe{
+		float: left;
+	}
+	/* .imgframe>img{
+		width:50%;
+		float: left;
+		margin-right: 1%;            
+	} */
+	#team ul{
+		width:49%;;
+		float: right;
+		padding-top:80px;
+	}
+}      
+/*pc css*/
+@media only screen and (min-width: 769px) {
+
+	#partnerone{
+		width:60%;
+		float: none;
+		margin: auto;
+		margin-bottom: 15px;
+	}
+	#partnertwo{
+		width:60%;
+		float: none;
+		margin: auto;
+		margin-bottom: 25px;
+	}
+	.imgframe{
+		float: left;
+	}
+	#team ul{
+		width:49%;;
+		float: right;
+		padding-top:80px;
+	}  
+	#about{
+		width:85%;
+	}
+	footer{
+		width:85%;
+		margin:auto;
+	}      
+} 

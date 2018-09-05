@@ -1,0 +1,140 @@
+/*phone css*/
+#bg {
+	width:100%; 
+	height: 200px;
+	overflow: hidden;
+}
+#bg img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+nav{
+	background-color: rgb(143, 143, 143,0.3);
+	padding-bottom: 8px;
+    /* position: fixed;  */
+}
+#menuicon p{
+    display: inline;
+    text-align: center;
+    line-height: 40px;
+    font-size: 27px;
+}
+#menuicon{
+    width: 100%;
+    height:40px;
+}
+#menuicon i{
+    font-size: 27px;
+    line-height: 40px;
+    color:rgb(94, 2, 2);
+    padding-left: 6px;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    list-style-image: none;
+    display: none;
+}
+nav ul li{
+    height: 40px;
+    width: 100%;
+    display:block;
+    text-align: center;
+}
+.contact{
+	width:80%;
+	max-width:650px;
+	margin:0 auto;
+	padding:30px 0;
+	text-align:center;
+}
+.contact h2{
+	font-family: 'Georgia','Arial','Helvetica','sans-serif','STHeiti Light','儷黑 Pro','LiHei Pro','Microsoft Yahei','Microsoft JhengHei','新細明體';
+	color:#000000;
+	font-size:24px;
+	line-height:1.5;
+	font-weight:bold;
+	text-align:center;
+}
+.contact h3{
+	color:#000000;
+	font-size:16px;
+	line-height:1.5;
+	text-align:center;
+	font-weight:bold;
+	margin-bottom:15px;
+}
+.contact p{
+	color:#000000;
+	font-size:12px;
+	line-height:1.8;
+	margin:8px 0;
+	
+}
+.contact .form p{
+	color:#83027b;
+	font-size:13px;
+	text-align: left;
+}
+.contact p span{
+	display:inline-block;
+	margin-top:10px;
+	margin-right:20px;
+	white-space:nowrap;
+	cursor:pointer;
+	color:#000000;
+}
+.single{
+	width:100%;
+	line-height:30px;
+	height:30px;
+	color:#000000;
+	border:0;
+	background-color:#fff;
+	border-bottom:1px solid #dadada;
+	outline:none;
+}
+.single:focus{
+	border-bottom:1px solid #83027b;
+}
+
+.msg{
+	width:100%;
+	height:150px;
+	line-height:1.5;
+	color:#000000;
+	border:0;
+	background-color:#eeeeee;
+	outline:none;
+}
+p.bt{
+	float:right;
+}
+.bt input{
+	padding:3px 8px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 10px; 
+}
+footer{
+    /* border: 2px solid red; */
+    background-color: rgb(110, 110, 110);
+    width:100%;
+    text-align: center;
+    margin-top: 15px;
+}
+/*tablet css*/
+@media only screen and (min-width: 481px) {
+
+
+}      
+/*pc css*/
+@media only screen and (min-width: 769px) {
+	#bg {	
+		height: 320px;	
+	}
+        
+} 

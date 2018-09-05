@@ -1,0 +1,89 @@
+/*phone css*/
+*{
+    margin: 0;
+    padding: 0;
+}
+#document {
+    width: 100%;
+    max-width:1920px;
+    position: relative;
+    margin:auto;
+   }
+header{
+    width: 100%;
+    background-color: rgb(255, 196, 196);
+    padding-bottom: 5px;
+}
+#banner{
+    width:99%;
+    height: 320px;
+    margin:auto;
+    background:url('../images/earring2.jpg') no-repeat;
+    
+}
+h1{
+    text-align: center;
+    padding: 8px auto 8px auto;
+}
+article{
+    background-color: blanchedalmond;
+    padding-bottom: 5px;
+}
+article p{
+    width:75%;
+    text-align: center;
+    margin:auto;
+}
+section{
+    width: 100%;
+    background-color: rgb(213, 187, 236);
+}
+#partnerone {
+    width:auto;
+    height: 319px;
+    /*line-height: 319px;*/
+    background: url('../images/people1920.jpg') no-repeat;  
+    margin:5px auto 5px auto;
+}
+#partnertwo {
+    width:auto;
+    height: 319px;
+    background: url('../images/people1920.jpg') no-repeat;
+    margin:5px auto 5px auto;
+}
+.clearboth{
+    clear: both;
+}
+footer{
+    background-color: rgb(110, 110, 110);
+    width:100%;
+    height: 200px;
+}
+/*tablet css*/
+@media only screen and (min-width: 481px) {
+
+        #banner{
+            width:99%;
+            height: 1000px;
+            margin:auto;
+            background:url('../images/earring1.jpg') no-repeat;    
+        }
+        .pone{
+            width:50%;
+            float: left;
+        }
+        .ptwo{
+            width:50%;
+            float: left;
+        }
+        #partnerone{
+            padding: 1px auto 1px auto;
+        }
+    }
+/*pc css*/
+@media only screen and (max-width: 768px) {
+    
+
+
+    }
+    
