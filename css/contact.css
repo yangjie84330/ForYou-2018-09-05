@@ -14,7 +14,7 @@ nav{
 	padding-bottom: 8px;
     /* position: fixed;  */
 }
-#menuicon p{
+/* #menuicon p{
     display: inline;
     text-align: center;
     line-height: 40px;
@@ -41,7 +41,7 @@ nav ul li{
     width: 100%;
     display:block;
     text-align: center;
-}
+} */
 .contact{
 	width:80%;
 	max-width:650px;

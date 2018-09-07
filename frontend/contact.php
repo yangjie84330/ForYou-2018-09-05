@@ -61,11 +61,11 @@
                     <p>E-mail*<br><input class="single" type="text" name="email" id="email" value=''></p>
                     
                     <p>您想製作的商品*<br>
-                        <input type="checkbox">&nbsp;&nbsp;<span>耳環</span>
-                        <input type="checkbox">&nbsp;&nbsp;<span>項鍊</span>
-                        <input type="checkbox">&nbsp;&nbsp;<span>戒指</span>
-                        <input type="checkbox">&nbsp;&nbsp;<span>手飾</span>
-                        <input type="checkbox">&nbsp;&nbsp;<span>其他</span>
+                        <input type="checkbox" style="display:inline;">&nbsp;&nbsp;<span>耳環</span>
+                        <input type="checkbox" style="display:inline;">&nbsp;&nbsp;<span>項鍊</span>
+                        <input type="checkbox" style="display:inline;">&nbsp;&nbsp;<span>戒指</span>
+                        <input type="checkbox" style="display:inline;">&nbsp;&nbsp;<span>手飾</span>
+                        <input type="checkbox" style="display:inline;">&nbsp;&nbsp;<span>其他</span>
                     </p>
 
                     <p>備註*</p><textarea name="msg" class="msg" id="msg"></textarea>
