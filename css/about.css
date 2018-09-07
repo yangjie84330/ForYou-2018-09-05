@@ -14,17 +14,36 @@
 	margin:10px auto;
 }
 section h1{
+	margin:10px auto;
 	color:rgb(110, 110, 110);
 	text-align: center;
 }
 #about p{
 	width: 69%;
+	font-size:16px;
 	margin: auto;
 	text-align: center;
 	line-height: 1.5;
-
 }
-#partnerone{    
+.line{
+	width: 73%;
+	margin: auto;
+	margin-top:15px; 
+	border-top:1px solid rgb(95, 95, 95, 0.6); 
+}
+footer{
+	background-color: rgb(187, 187, 187,0.5);
+    width:100%;
+    text-align: center;
+	margin-top: 15px;
+	color:rgb(48, 48, 48);
+}
+#about img{
+	width:100%;
+	padding-top: 15px;
+}
+
+/* #partnerone{    
     width: 98%;
     margin:5px auto 5px auto;
     overflow: hidden;
@@ -53,27 +72,15 @@ section h1{
 #team ul{
 	padding-left: 80px;
 }
-.line{
-	width: 73%;
-	margin: auto;
-	margin-top:15px; 
-	border-top:1px solid rgb(95, 95, 95, 0.6); 
-}
-footer{
-    background-color: rgb(110, 110, 110);
-    width:100%;
-    text-align: center;
-	margin-top: 15px;
-	color:#fff;
-}
 #team ul li{
 	list-style:disc;
 	font-size: 25px;
-}
+} */
+
 /*tablet css*/
 @media only screen and (min-width: 481px) {
 
-	#partnerone{
+	/* #partnerone{
 		width:88%;
 		float: none;
 		margin: auto;
@@ -95,16 +102,16 @@ footer{
 		float: left;
 		margin-right: 1%;            
 	} */
-	#team ul{
+	/*#team ul{
 		width:49%;;
 		float: right;
 		padding-top:80px;
-	}
+	} */
 }      
 /*pc css*/
 @media only screen and (min-width: 769px) {
 
-	#partnerone{
+	/* #partnerone{
 		width:60%;
 		float: none;
 		margin: auto;
@@ -123,12 +130,11 @@ footer{
 		width:49%;;
 		float: right;
 		padding-top:80px;
-	}  
+	}   */
 	#about{
 		width:85%;
 	}
-	footer{
-		width:85%;
-		margin:auto;
-	}      
+	#about p{
+		padding-top: 75px;
+	}
 } 

@@ -1,4 +1,6 @@
-<?php require_once('../../connection/connection.php');?>
+<?php
+require_once('../function/login_check.php');
+require_once('../../connection/connection.php');?>
 <?php
 $limit = 2;
 if (isset($_GET["page"])) { 
@@ -99,7 +101,7 @@ $total_rows = count($data);
             <li class="page-item">
 
              <?php if($page>1){ ?>
-              <a class="page-link" href="list.php?page=<?php echo $page-1; ?>"><span>«</span></a>
+              <a class="page-link" href="list.php?product_categories_id=<?php echo$_GET['product_categories_id']; ?>&page=<?php echo $page-1; ?>"><span>«</span></a>
               <?php }else{ ?>
               <span class="page-link">«</span>
               <?php } ?>
@@ -108,14 +110,14 @@ $total_rows = count($data);
 
             <?php for($i=1;$i<=$total_pages;$i++){ ?>
             <li class="page-item">
-              <a class="page-link" href="list.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+              <a class="page-link" href="list.php?product_categories_id=<?php echo$_GET['product_categories_id']; ?>&page=<?php echo $i; ?>"><?php echo $i; ?></a>
             </li>
             <?php } ?>
 
             <li class="page-item">
 
               <?php if($page<$total_pages){ ?>
-              <a class="page-link" href="list.php?page=<?php echo $page+1; ?>"><span>»</span></a>
+              <a class="page-link" href="list.php?product_categories_id=<?php echo$_GET['product_categories_id']; ?>&page=<?php echo $page+1; ?>"><span>»</span></a>
               <?php }else{ ?>
               <span class="page-link">»</span>
               <?php } ?>

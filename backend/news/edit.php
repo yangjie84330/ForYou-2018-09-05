@@ -1,4 +1,6 @@
-<?php require_once('../../connection/connection.php');?>
+<?php
+require_once('../function/login_check.php');
+require_once('../../connection/connection.php');?>
 
 <?php
 if(isset($_POST['EditFrom']) && $_POST['EditFrom'] == "UPDATE"){

@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/fontawesome-5.2.0/css/all.css">
+    <link rel="stylesheet" href="../css/fontawesome-5.2.0/css/all.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="css/headstyle.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/headstyle.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
     
-    <title>index</title>
+    <title>For You ♡</title>
 </head>
 <body>
     <div id="document">
@@ -112,14 +112,17 @@
                 <ol class="carousel-indicators"></ol>
                 <!-- 廣告輪播列表 -->
                 <div class="carousel-inner" role="listbox">
-                  <div class="item ">
-                        <img src="images/accessory.jpeg" data-color="#eee"> 
-                  </div>
                   <div class="item">
-                      <img src="images/earring1280.jpg" data-color="#eee">
+                        <img src="../images/banner_01.jpeg" data-color="#eee"> 
                   </div>
                   <div class="item active">
-                      <img src="images/earring1.jpeg" data-color="#eee">
+                      <img src="../images/banner_02.jpeg" data-color="#eee">
+                  </div>
+                  <div class="item">
+                      <img src="../images/banner_03.jpeg" data-color="#eee">
+                  </div>
+                  <div class="item">
+                      <img src="../images/banner_04.jpeg" data-color="#eee">
                   </div>
                 </div>
       
@@ -135,40 +138,51 @@
               </div>
         
         <article>
-            <h1>ABOUT US</h1>
-            <p>滿示特城題老精上行長師企美產準張美西為意二間很果導愛術專與行單喜唱不曾人此響？
-                別一多果說功所日錯約告然觀回足對：響委還接港……在苦不而；氣下司走社目你定活展檢長舉；者然你們己童可風生力，
-                著毒燈念我我明組，手家雙水一在門業上因趣動年動的靈高。</p>
+            <h1>For You</h1>
+                <p> 時尚，從風格開始<br>
+                    千奇百變的女孩，一樣的單品戴出千變萬化的風格<br>
+                    簡單，依然精緻<br>
+                    精緻，依然簡單<br>
+                    風格，從for you 開始。
+                </p>
         </article>
 
         <div class="clearboth"></div>
 
         <section>
-            <h1>TEAM</h1>
+            <h1>- Jewelry designer -</h1>
             <div id="partnerone">
-                <img src="images/people480.jpg">
-                <p>滿示特城題老精上行長師企美產準張美西為意二間很果導愛術專與行單喜唱不曾人此響？
-                        別一多果說功所日錯約告然觀回足對：響委還接港……在苦不而；氣下司走社目你定活展檢長舉；者然你們己童可風生力，
-                        著毒燈念我我明組，手家雙水一在門業上因趣動年動的靈高。</p>
+            <div class="imgframe"><img src="../images/people350.jpg"></div>
+            <div class="line"></div>
+                <p> - 滿示特城題老精上行長師企美產準張美<br>
+                    - 西為意二間很果導愛術專與行單喜唱不曾人此響？<br>
+                    - 別一多果說功所日錯約告然觀回足對：響委還接港<br>
+                    - 在苦不而；氣下司走社目你定活展檢長舉；者然你們己童可<br>
+                    -  風生力，著毒燈念我我明組，手家雙水一在門業上因趣動年動的靈高。</p>
+            <!-- <div class="line"></div> -->
             </div>
 
          <!-- <div class="clearboth"></div>     -->
 
            <div id="partnertwo"> 
-                <img src="images/people480.jpg">
-                <p>滿示特城題老精上行長師企美產準張美西為意二間很果導愛術專與行單喜唱不曾人此響？
-                    別一多果說功所日錯約告然觀回足對：響委還接港……在苦不而；氣下司走社目你定活展檢長舉；者然你們己童可風生力，
-                    著毒燈念我我明組，手家雙水一在門業上因趣動年動的靈高。</p>
+           <div class="imgframe"><img src="../images/people350.jpg"></div>
+           <div class="line"></div>
+                <p> - 滿示特城題老精上行長師企美產準張美<br>
+                    - 西為意二間很果導愛術專與行單喜唱不曾人此響？<br>
+                    - 別一多果說功所日錯約告然觀回足對：響委還接港<br>
+                    - 在苦不而；氣下司走社目你定活展檢長舉；者然你們己童可<br>
+                    -  風生力，著毒燈念我我明組，手家雙水一在門業上因趣動年動的靈高。</p>
+            
             </div>
         </section>
 
            
 
         <footer> 
-            <div class="container">
-            <div id="logo"></div> 
-            Copyright © 2018 yuen All rights reserved.
-            </div>
+            
+            <div id="logo"><img src="../images/logo_black.png"alt=""></div> 
+            Copyright © 2018 Foryou All rights reserved.
+        
         </footer>
     </div>
     
@@ -232,8 +246,8 @@
 <div id="loading" style="display: none;">
     <span id="loader"><span style="width: 100%;"></span></span>
 </div>
-<script src="js/header.js"></script>
-<script src="js/script.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/script.js"></script>
 <script>
     $(function(){
     // 設定

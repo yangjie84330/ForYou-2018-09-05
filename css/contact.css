@@ -120,11 +120,11 @@ p.bt{
     border-radius: 10px; 
 }
 footer{
-    /* border: 2px solid red; */
-    background-color: rgb(110, 110, 110);
+    background-color: rgb(187, 187, 187,0.5);
     width:100%;
     text-align: center;
-    margin-top: 15px;
+	margin-top: 15px;
+	color:rgb(48, 48, 48);
 }
 /*tablet css*/
 @media only screen and (min-width: 481px) {

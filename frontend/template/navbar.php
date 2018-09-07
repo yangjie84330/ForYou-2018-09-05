@@ -59,7 +59,7 @@
 							</a>
 						</li>
 						<li class="nav6" style="height: 304.96px;">
-							<a href="https://artie.co.jp/quality/">
+							<a href="#">
 								<div class="nav_inner">
 									<p class="main">♡♡♡</p>
 								</div>
@@ -97,8 +97,8 @@
 </div>
 
 
-<script src="js/header.js"></script>
-<script src="js/script.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/script.js"></script>
 <script>
     $(function(){
     // 設定

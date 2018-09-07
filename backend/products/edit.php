@@ -1,19 +1,33 @@
-<?php require_once('../../connection/connection.php');?>
+<?php
+require_once('../function/login_check.php');
+require_once('../../connection/connection.php');?>
 
 <?php
 if(isset($_POST['EditFrom']) && $_POST['EditFrom'] == "UPDATE"){
-  $sql= "UPDATE product_categories SET category=:category,updated_at=:updated_at WHERE product_categories_id=:product_categories_id";
+
+  if(isset($_FILES['picture']['name'])&&$_FILES['picture']['name'] != null){
+    unlink("../../uploads/products/".$_POST['old_picture']);
+    $filename = $_FILES['picture']['name'];
+    $file_path = "../../uploads/products/".$_FILES['picture']['name'];
+    move_uploaded_file($_FILES['picture']['tmp_name'], $file_path);
+  }else{
+    $filename = $_POST['old_picture'];
+  }
+  $sql= "UPDATE products SET picture=:picture, name=:name, price=:price, description=:description, updated_at=:updated_at WHERE products_id=:products_id";
   $sth = $db ->prepare($sql);
-  $sth ->bindParam(":category", $_POST['category'], PDO::PARAM_STR);
+  $sth ->bindParam(":picture", $filename, PDO::PARAM_STR);
+  $sth ->bindParam(":name", $_POST['name'], PDO::PARAM_STR);
+  $sth ->bindParam(":price", $_POST['price'], PDO::PARAM_STR);
+  $sth ->bindParam(":description", $_POST['description'], PDO::PARAM_STR);
   $sth ->bindParam(":updated_at", $_POST['updated_at'], PDO::PARAM_STR);
-  $sth ->bindParam(":product_categories_id", $_POST['product_categories_id'], PDO::PARAM_INT);
+  $sth ->bindParam(":products_id", $_POST['products_id'], PDO::PARAM_INT);
   $sth ->execute();
 
-  header('Location: list.php');
-}
-$query = $db->query("SELECT * FROM product_categories WHERE product_categories_id =".$_GET['product_categories_id']);
-$product_categories = $query->fetch(PDO::FETCH_ASSOC);
-?>
+  header('Location: list.php?product_categories_id='.$_POST['product_categories_id']);
+}else{
+$query = $db->query("SELECT * FROM products WHERE products_id =".$_GET['products_id']);
+$products = $query->fetch(PDO::FETCH_ASSOC);
+}?>
 
 <!DOCTYPE html>
 <html>
@@ -33,7 +47,7 @@ $product_categories = $query->fetch(PDO::FETCH_ASSOC);
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="">產品分類管理</h1>
+          <h1 class="">產品管理</h1>
         </div>
       </div>
     </div>
@@ -46,7 +60,7 @@ $product_categories = $query->fetch(PDO::FETCH_ASSOC);
             <li class="breadcrumb-item">
               <a href="#">Home</a>
             </li>
-            <li class="breadcrumb-item active">產品分類管理</li>
+            <li class="breadcrumb-item active">產品管理</li>
             <li class="breadcrumb-item active">編輯</li>
           </ul>
         </div>
@@ -56,23 +70,42 @@ $product_categories = $query->fetch(PDO::FETCH_ASSOC);
       <div class="row">
         <div class="col-md-12">
         <br>
-          <form class="" action="edit.php" method="post"> 
-
-            <div class="form-group form-row">
-              <label class="col-sm-2 col-form-label">分類</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" name="category" value="<?php echo $product_categories['category'];?>"> 
-                </div>
-            </div>
-
-              <div class="col-md-12 text-right">
-                  <a href="list.php" class="btn btn-primary">取消並回上一頁</a>
-                  <button type="submit" class="btn btn-primary">確認送出</button>
-                  <input type="hidden" name="product_categories_id" value="<?php echo $product_categories['product_categories_id'];?>" >
-                  <input type="hidden" name="updated_at" value="<?php echo date('Y-m-d H-i-s'); ?>">
-                  <input type="hidden" name="EditFrom" value="UPDATE" >
+          <form class="" action="edit.php" method="post" enctype="multipart/form-data"> 
+              <div class="form-group form-row">
+                  <label class="col-sm-2 col-form-label">照片</label>
+                    <div class="col-sm-10">
+                      <img src="../../uploads/products"<?php echo $products['picture'];?> alt="">
+                      <input type="file" class="form-control" name="picture" value="<?php echo $products['picture'];?>"> </div>
+                      <input type="hidden" name="old_picture" value="<?php echo $products['picture'];?>">
+                  </div>
+              <div class="form-group form-row">
+                <label class="col-sm-2 col-form-label">名稱</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="name" value="<?php echo $products['name'];?>">
+                  </div>
               </div>
-          </form>
+              <div class="form-group form-row">
+                <label class="col-sm-2 col-form-label">價錢</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="price" value="<?php echo $products['price'];?>">
+                  </div>
+              </div>
+              <div class="form-group form-row">
+                <label class="col-sm-2 col-form-label">產品說明</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="description" value="<?php echo $products['description'];?>">
+                  </div>
+              </div>
+              <div class="col-md-12 text-right"> 
+              <!--<input type="reset" class="btn btn-primary" value="取消並回上一頁">-->
+                <button type="reset" class="btn btn-primary">清空</button>
+                <button type="submit" class="btn btn-primary">確認送出</button>
+                <input type="hidden" name="products_id" value="<?php echo $_GET['products_id'];?>">
+                <input type="hidden" name="product_categories_id" value="<?php echo $_GET['product_categories_id'];?>">
+                <input type="hidden" name="updated_at" value="<?php echo date('Y-m-d H-i-s'); ?>">
+                <input type="hidden" name="EditFrom" value="UPDATE" >
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -113,14 +146,6 @@ $product_categories = $query->fetch(PDO::FETCH_ASSOC);
     '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
     '//www.tinymce.com/css/codepen.min.css']
 });
-  </script>
-  <script> 
-  //使用name選取器的寫法，create裡是用id選取器的寫法
-  $(function(){
-    $("input[name='published_date']").datepicker({
-      dateFormat: "yy-mm-dd"
-    });
-  } );
   </script>
 </body>
 
