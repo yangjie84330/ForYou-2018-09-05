@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require_once('../connection/connection.php');
-$query = $db->query("SELECT * FROM products WHERE products_id");
+$query = $db->query("SELECT * FROM products");
 $product_list = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
